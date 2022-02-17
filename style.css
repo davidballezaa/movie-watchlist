@@ -68,7 +68,7 @@ header {
 }
 
 #form input {
-  text-indent: 40px;
+  text-indent: 15px;
   width: 320px;
   color: #6b7280;
   border: 1px solid #d1d5db;
@@ -158,8 +158,111 @@ header {
 }
 
 @media (max-width: 620px) {
+  header {
+    padding: 0 20px;
+  }
+
+  .header__text h1 {
+    font-size: 30px;
+  }
+
+  .header__text a {
+    font-size: 14px;
+    margin-left: 5px;
+  }
+
+  #form input {
+    width: 200px;
+  }
+
+  #form button {
+    padding: 8px 15px;
+  }
+
   .movie {
     width: auto;
+  }
+
+  .info__title {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .info__title h2 {
+    font-size: 15px;
+  }
+
+  .info__rating {
+    font-size: 12px;
+    margin-left: 0;
+  }
+
+  .info__stats {
+    font-size: 12px;
+  }
+
+  .info__stats button {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+  }
+
+  .info__stats button img {
+    width: 12px;
+    height: 12px;
+  }
+
+  .info__plot {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 300px) {
+  .header__text h1 {
+    font-size: 20px;
+  }
+
+  .header__text a {
+    font-size: 10px;
+    margin-left: 5px;
+  }
+  #form input {
+    text-indent: 5px;
+    font-size: 12px;
+    width: 120px;
+  }
+
+  #form button {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  .info__title h2 {
+    font-size: 14px;
+  }
+
+  .info__rating {
+    font-size: 10px;
+    margin-left: 0;
+  }
+
+  .info__stats {
+    font-size: 10px;
+  }
+
+  .info__stats button {
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .info__stats button img {
+    width: 10px;
+    height: 10px;
+  }
+
+  .info__plot {
+    font-size: 10px;
   }
 }
 
