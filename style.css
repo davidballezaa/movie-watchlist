@@ -92,6 +92,25 @@ header {
   padding: 40px 10px;
 }
 
+.message {
+  margin-top: 10px;
+  color: #dfdddd;
+}
+
+.message--link {
+  display: flex;
+  align-items: center;
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.message--link img {
+  margin-right: 5px;
+}
+
 .movie {
   display: flex;
   border-bottom: 1.5px solid #e5e7eb;
