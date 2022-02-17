@@ -89,3 +89,15 @@ button {
     width: auto;
   }
 }
+
+/* WATCHLIST */
+
+.info__remove {
+  cursor: pointer;
+  display: flex;
+}
+
+.info__remove img {
+  width: 16px;
+  height: 16px;
+}
