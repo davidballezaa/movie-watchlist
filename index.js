@@ -36,10 +36,16 @@ document.getElementById('form').addEventListener('submit', event => {
                   <div class="info__stats">
                     <span class="info__runtime">${data.Runtime}</span>
                     <span class="info__genre">${data.Genre}</span>
-                    <button class="info__add" onclick="addToWatchlist('${movie.imdbID}')" id="info__add--${movie.imdbID}">
-                      <img src="./assets/add-icon.png" />
-                      Add to Watchlist
-                    </button>
+                    ${
+                      watchListData.indexOf(movie.imdbID) == -1
+                        ? `<button class="info__add" onclick="addToWatchlist('${movie.imdbID}')"     id="info__add--${movie.imdbID}">
+                        <img src="./assets/add-icon.png" />
+                        Add to Watchlist
+                      </button>`
+                        : `<button class="info__add" id="info__add--${movie.imdbID}" disabled>
+                        Added 
+                      </button>`
+                    }
                   </div>
                   <p class="info__plot">${data.Plot}</p>
                 </div>
