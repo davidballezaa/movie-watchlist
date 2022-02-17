@@ -3,6 +3,7 @@ let myWatchList = JSON.parse(localStorage.getItem('watchlist')) || []
 function removeFromWatchlist(id) {
   myWatchList = myWatchList.filter(movieID => movieID != id)
   localStorage.setItem('watchlist', JSON.stringify(myWatchList))
+  document.location.reload(true)
 }
 
 if (myWatchList.length > 0) {
