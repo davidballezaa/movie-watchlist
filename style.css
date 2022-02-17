@@ -44,9 +44,33 @@ header a {
 #form {
   position: absolute;
   display: flex;
-  bottom: -8px;
+  align-items: center;
+  bottom: -16px;
   left: 50%;
   transform: translateX(-50%);
+}
+
+#form > * {
+  height: 40px;
+  font-size: 14px;
+}
+
+#form input {
+  text-indent: 40px;
+  width: 320px;
+  color: #6b7280;
+  border: 1px solid #d1d5db;
+  border-right: 0;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+#form button {
+  padding: 8px 35px;
+  border: 1px solid #d1d5db;
+  cursor: pointer;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 #movies {
