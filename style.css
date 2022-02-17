@@ -13,11 +13,47 @@ button {
   font-family: 'Inter', sans-serif;
 }
 
+header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 200px;
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.header__background {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./assets/header-background.png');
+  background-position: center;
+}
+
+header h1 {
+  font-size: 45px;
+  color: white;
+  z-index: 5;
+}
+
+header a {
+  color: white;
+  z-index: 5;
+}
+
+#form {
+  position: absolute;
+  display: flex;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 #movies {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 10px;
+  padding: 20px 10px;
 }
 
 .movie {
@@ -45,6 +81,7 @@ button {
 .info__add img {
   width: 16px;
   height: 16px;
+  margin-right: 3px;
 }
 
 .info__title {
@@ -100,4 +137,5 @@ button {
 .info__remove img {
   width: 16px;
   height: 16px;
+  margin-right: 3px;
 }
