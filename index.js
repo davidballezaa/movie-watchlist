@@ -15,6 +15,11 @@ document.getElementById('form').addEventListener('submit', event => {
     .then(res => res.json())
     .then(data => {
       const movies = data.Search
+      if (!movies) {
+        document.getElementById('movies').innerHTML =
+          '<p class="message">Unable to find what you’re looking for. Please try another search.</p>'
+        return
+      }
       document.getElementById('movies').innerHTML = ''
       for (let movie of movies) {
         fetch(`https://www.omdbapi.com/?apikey=1df1e1f3&i=${movie.imdbID}`)
