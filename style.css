@@ -17,6 +17,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 10px;
 }
 
 .movie {
@@ -29,6 +30,11 @@ button {
 .movie__poster {
   width: 100px;
   align-self: flex-start;
+  margin-right: 20px;
+}
+
+.movie__info {
+  padding-right: 5px;
 }
 
 .info__add {
@@ -41,14 +47,45 @@ button {
   height: 16px;
 }
 
-@media (max-width: 620px) {
-  .movie {
-    width: 400px;
-  }
+.info__title {
+  display: flex;
+  align-items: center;
 }
 
-@media (max-width: 420px) {
+.info__title h2 {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.info__rating {
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.info__rating img {
+  height: 100%;
+  vertical-align: center;
+}
+
+.info__stats {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 14px;
+  margin: 6px 0;
+}
+
+.info__stats > *:not(:last-child) {
+  margin-right: 10px;
+}
+
+.info__plot {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+@media (max-width: 620px) {
   .movie {
-    width: 200px;
+    width: auto;
   }
 }

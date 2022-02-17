@@ -24,17 +24,23 @@ document.getElementById('form').addEventListener('submit', event => {
               <div class="movie">
                 <img class="movie__poster" src=${data.Poster}/>
                 <div class="movie__info">
-                  <h2 class="info__title">${data.Title}</h2>
-                  <span class="info__rating">
-                    <img src="./assets/star-icon.png" />
-                    ${data.imdbRating}
-                  </span>
-                  <span class="info__runtime">${data.Runtime}</span>
-                  <span class="info__genre">${data.Genre}</span>
-                  <button class="info__add" onclick="addToWatchlist('${movie.imdbID}')" id="info__add--${movie.imdbID}">
-                    <img src="./assets/add-icon.png" />
-                    Add to Watchlist
-                  </button>
+                  <div  class="info__title">
+                    <h2>
+                      ${data.Title}
+                    </h2>
+                    <span class="info__rating">
+                      <img src="./assets/star-icon.png" />
+                      ${data.imdbRating}
+                    </span>
+                  </div>
+                  <div class="info__stats">
+                    <span class="info__runtime">${data.Runtime}</span>
+                    <span class="info__genre">${data.Genre}</span>
+                    <button class="info__add" onclick="addToWatchlist('${movie.imdbID}')" id="info__add--${movie.imdbID}">
+                      <img src="./assets/add-icon.png" />
+                      Add to Watchlist
+                    </button>
+                  </div>
                   <p class="info__plot">${data.Plot}</p>
                 </div>
               </div>
