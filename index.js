@@ -1,3 +1,12 @@
+let watchListData = JSON.parse(localStorage.getItem('watchlist')) || []
+
+function addToWatchlist(id) {
+  watchListData.push(id)
+  localStorage.setItem('watchlist', JSON.stringify(watchListData))
+  document.getElementById(`info__add--${id}`).innerText = 'Added'
+  document.getElementById(`info__add--${id}`).disabled = true
+}
+
 document.getElementById('form').addEventListener('submit', event => {
   event.preventDefault()
   const query = event.target.query.value
@@ -19,6 +28,10 @@ document.getElementById('form').addEventListener('submit', event => {
                   <span class="info__rating">${data.imdbRating}</span>
                   <span class="info__runtime">${data.Runtime}</span>
                   <span class="info__genre">${data.Genre}</span>
+                  <button class="info__add" onclick="addToWatchlist('${movie.imdbID}')" id="info__add--${movie.imdbID}">
+                    <img src="./assets/Icon.png" />
+                    Add to Watchlist
+                  </button>
                   <p class="info__plot">${data.Plot}</p>
                 </div>
               </div>
@@ -26,6 +39,4 @@ document.getElementById('form').addEventListener('submit', event => {
           })
       }
     })
-
-  // title, year, poster, type, imdbID
 })

@@ -21,3 +21,13 @@ button {
 .movie__poster {
   width: 100px;
 }
+
+.info__add {
+  cursor: pointer;
+  display: flex;
+}
+
+.info__add img {
+  width: 16px;
+  height: 16px;
+}
